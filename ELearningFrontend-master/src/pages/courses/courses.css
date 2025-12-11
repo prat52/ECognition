@@ -1,0 +1,91 @@
+.courses {
+  padding: 80px 0;
+  text-align: center;
+  min-height: 60vh;
+
+  h2 {
+    font-size: 32px;
+    color: #8a4baf;
+    margin-bottom: 30px;
+  }
+
+  .course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+.course-actions {
+  
+  display: flex;              /* ✅ enables row layout */
+  justify-content: center;    /* ✅ centers buttons horizontally */
+  align-items: center;        /* ✅ vertically aligned */
+  gap: 20px;                  /* ✅ space between buttons */
+  margin-bottom: 30px;
+  width: 100%;
+}
+.course-actions .common-btn {
+  width: auto;
+  background: #4f46e5;
+}
+
+.course-search {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  /* smooth animation */
+  transition: all 0.3s ease;
+}
+
+.course-search input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #dcdcdc;
+  outline: none;
+  background: white;
+
+  transition: all 0.3s ease;
+}
+
+.course-search input:focus {
+  border-color: #4f46e5;       /* purple highlight */
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.2);
+}
+
+.course-search button {
+  padding: 12px 20px;
+  background: #4f46e5;        /* modern purple */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: background 0.3s ease;
+}
+
+.course-search button:hover {
+  background: #4338ca;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .course-search {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 90%;
+  }
+
+  .course-search button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+.profile {
+  background: linear-gradient(135deg, #b7cadd, #dadbdd); /* Soft gradient with calming colors */
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  width: 30%;
+  margin: 105px auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  .common-btn{
+    background-color: #4f46e5;
+  }
+
+  @media (max-width: 768px) {
+    padding: 15px;
+    width: 80%;
+    margin: 90px auto;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(104, 50, 50, 0.2);
+  }
+  color: white !important;
+  .profile-info {
+    text-align: left;
+    margin-top: 20px;
+    
+
+    p {
+      margin-bottom: 12px;
+      /* color: #6d7297; Deep slate blue for text */
+      
+      line-height: 1.6;
+      font-family: 'Arial', sans-serif;
+
+      strong {
+        color: #020002; /* Soft mauve for emphasis */
+        font-weight: bold;
+      }
+      
+    }
+    
+  }
+  h2{
+    /* color: rgb(61, 145, 22);
+     */
+     color: #FF7F50;
+  }
+  
+}
+.common-btn {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; Center the content horizontally */
+  width: 200px; /* Set a fixed width for all buttons */
+  padding: 10px;
+  background: #4f46e5; /* Example background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.common-btn svg {
+  margin-right: 8px; /* Adjust the value as needed */
+}

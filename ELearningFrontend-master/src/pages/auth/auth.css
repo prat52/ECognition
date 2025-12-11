@@ -1,0 +1,58 @@
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: #d8e1e7; /* Light gray background for a clean look */
+
+  .auth-form {
+    background-color: #fff; 
+    /* background-color: rgba(126, 79, 79, 0.2); */
+    padding: 30px;
+    border-radius: 60px; /* Slightly more rounded corners */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow for depth */
+    text-align: center;
+    width: 320px;
+
+    h2 {
+      font-size: 26px;
+      color: #8a5baf; /* White color for the heading to contrast with the background */
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+
+      label {
+        align-self: flex-start;
+        margin-bottom: 8px;
+        font-size: 15px;
+        color: #5932a7; /* Light gray for labels to maintain contrast */
+      }
+      .common-btn{
+  background-color: #4f46e5;
+}
+
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #b0bec5; /* Light gray border */
+        border-radius: 5px;
+        background-color: #ffffff; /* White background for input fields */
+        color: #423d4b; /* Dark gray text color */
+        transition: border-color 0.3s, box-shadow 0.3s;
+
+        &:focus {
+          border-color: #ffab40; /* Orange border on focus for a vibrant touch */
+          box-shadow: 0 0 5px rgba(255, 171, 64, 0.5); /* Subtle orange glow on focus */
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,87 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  
+/* width: 97.2vw; */
+height: 5vh;
+  .logo {
+    width: 33%;
+    font-size: 25px;
+    font-weight: 600;
+    color: #8a4baf;
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  .link {
+    width: 33%;
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+    transition: transform 0.3s ease, border-bottom 0.3s ease; /* Smooth transition for the scale and border effects */
+
+    @media (max-width: 768px) {
+      gap: 0.5rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.2); /* Increase the size of the logo */
+        border-bottom: 2px solid #8a4baf; /* Change the border color to match the hover color */      
+        color: #8a4baf;
+      }
+    }
+  }
+}
+.title{
+  color: #007BFF;
+    text-shadow: 20px 2px #FFFFFF;
+    font-size: 2em;
+    font-family:monospace;
+    text-align: center;
+    /* margin-bottom: 50px; */
+
+}
+@media (max-width: 840px) {
+  .title {
+    display: none; /* Hide the title on screens 768px or smaller */
+  }
+}
+
+@media (max-width: 1000px) {
+  .title {
+    /* width: 50px; Hide the title on screens 768px or smaller */
+  font-size:medium;
+  }
+}
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image */
+.logo img {
+  height: 61px;
+  width: 124px;
+  max-width: 100%; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo img {  
+    height: 100%;
+    width: 126px;}
+}
+

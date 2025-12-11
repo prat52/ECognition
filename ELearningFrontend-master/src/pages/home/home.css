@@ -1,0 +1,76 @@
+.home {
+  /* background-color: #f5f5f5; */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+  
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; 
+  padding: 100px 0;
+  text-align: center;
+  display: flex;
+  .common-btn{
+  background: #4f46e5;
+}
+
+
+  .home-content {
+    max-width: 800px;
+    margin: 0 auto;
+display: flex;
+flex-direction: column;
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    button {
+      flex-wrap: wrap;
+      padding: 12px 24px;
+      align-self: center;
+      align-content: center;
+      justify-content: center;
+
+    }
+    
+  }
+}
+
+.home-images {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap; /* stacks on small screens */
+}
+
+.home-image{
+  width: 100%;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+.robo-image {
+  width: 80%;
+  max-width: 300px;
+  height: 200px;
+  border-radius: 12px;
+}
+
+
+
+

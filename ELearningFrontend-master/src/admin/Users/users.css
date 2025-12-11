@@ -1,0 +1,59 @@
+.users {
+  width: 350px;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 20px auto;
+  min-height: 80vh;
+  border: solid gray 1px;
+}
+.users h1 {
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+  background-color: #76bac1;
+  color: white;
+}
+
+table th, 
+table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+table th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.common-btn {
+  background-color: #76bac1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.common-btn:hover {
+  background-color: #649da6;
+}
