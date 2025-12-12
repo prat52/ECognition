@@ -5,11 +5,14 @@ import { rm } from "fs";
 import { promisify } from "util";
 import fs from "fs";
 import { User } from "../models/User.js";
+import axios from "axios";
+
 
 
 export const createCourse = async (req, res) => {
   try {
     const { title, description, category } = req.body;
+    const file = req.file;
 
     const combinedText = `${title}. ${category}. ${description}`;
 
@@ -21,6 +24,7 @@ export const createCourse = async (req, res) => {
 
     const course = await Courses.create({
       ...req.body,
+      image: file.path,
       embedding: data.embedding
     });
 

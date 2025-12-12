@@ -16,7 +16,7 @@ const AdminDashbord = ({ user }) => {
     try {
       const { data } = await axios.get(`${server}/api/stats`, {
         headers: {
-          token: localStorage.getItem("token"),
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
 

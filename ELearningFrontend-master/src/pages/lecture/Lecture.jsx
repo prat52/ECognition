@@ -20,6 +20,7 @@ const Lecture = ({ user }) => {
   const [video, setvideo] = useState("");
   const [videoPrev, setVideoPrev] = useState("");
   const [btnLoading, setBtnLoading] = useState(false);
+  const token = localStorage.getItem("token");
 
   if (user && user.role !== "admin" && !user.subscription.includes(params.id))
     return navigate("/");
@@ -28,7 +29,7 @@ const Lecture = ({ user }) => {
     try {
       const { data } = await axios.get(`${server}/api/lectures/${params.id}`, {
         headers: {
-          token: localStorage.getItem("token"),
+          Authorization: `Bearer ${token}`,
         },
       });
       setLectures(data.lectures);
@@ -44,7 +45,7 @@ const Lecture = ({ user }) => {
     try {
       const { data } = await axios.get(`${server}/api/lecture/${id}`, {
         headers: {
-          token: localStorage.getItem("token"),
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
       setLecture(data.lecture);
@@ -74,7 +75,7 @@ const Lecture = ({ user }) => {
 
     myForm.append("title", title);
     myForm.append("description", description);
-    myForm.append("file", video);
+    myForm.append("image", video);
 
     try {
       const { data } = await axios.post(
@@ -82,7 +83,7 @@ const Lecture = ({ user }) => {
         myForm,
         {
           headers: {
-            token: localStorage.getItem("token"),
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
@@ -106,7 +107,7 @@ const Lecture = ({ user }) => {
       try {
         const { data } = await axios.delete(`${server}/api/lecture/${id}`, {
           headers: {
-            token: localStorage.getItem("token"),
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         });
 
@@ -129,7 +130,7 @@ const Lecture = ({ user }) => {
         `${server}/api/user/progress?course=${params.id}`,
         {
           headers: {
-            token: localStorage.getItem("token"),
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );
@@ -150,7 +151,7 @@ const Lecture = ({ user }) => {
         {},
         {
           headers: {
-            token: localStorage.getItem("token"),
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
         }
       );

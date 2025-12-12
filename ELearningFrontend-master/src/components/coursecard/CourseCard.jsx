@@ -15,7 +15,7 @@ const CourseCard = ({ course }) => {
 
   const { fetchCourses } = CourseData();
   const token = localStorage.getItem("token");
-  console.log("Admin ",token);
+  
 
   const deleteHandler = async (id) => {
    
